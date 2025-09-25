@@ -1,3 +1,29 @@
+// Cursor Spotlight Effect
+const spotlight = document.querySelector('.cursor-spotlight');
+let mouseX = 0;
+let mouseY = 0;
+let currentX = 0;
+let currentY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animateSpotlight() {
+    currentX += (mouseX - currentX) * 0.1;
+    currentY += (mouseY - currentY) * 0.1;
+
+    if (spotlight) {
+        spotlight.style.left = currentX + 'px';
+        spotlight.style.top = currentY + 'px';
+    }
+
+    requestAnimationFrame(animateSpotlight);
+}
+
+animateSpotlight();
+
 // Mobile Navigation
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -69,17 +95,27 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Event Cards Hover Effect
+// Event Cards 3D Hover Effect
 const eventCards = document.querySelectorAll('.event-card');
 
 eventCards.forEach(card => {
-    card.addEventListener('mouseenter', (e) => {
+    card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
 
         card.style.setProperty('--x', `${x}px`);
         card.style.setProperty('--y', `${y}px`);
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
     });
 });
 
@@ -130,6 +166,11 @@ createNoiseEffect();
 
 // Logo Animation on Load
 window.addEventListener('load', () => {
+    // Hide loader after page loads
+    const loader = document.querySelector('.loader');
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+    }, 1500);
     const logoText = document.querySelector('.logo-text');
     const logoCircles = document.querySelectorAll('.logo-circle');
 
@@ -203,3 +244,56 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Magnetic Button Effect
+document.querySelectorAll('.cta-button, .contact-link').forEach(button => {
+    button.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        this.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+
+    button.addEventListener('mouseleave', function() {
+        this.style.transform = 'translate(0, 0)';
+    });
+});
+
+// Split Text Animation for Hero
+function splitTextAnimation() {
+    const heroDetails = document.querySelectorAll('.hero-detail');
+
+    heroDetails.forEach((detail, index) => {
+        const text = detail.textContent;
+        detail.innerHTML = '';
+
+        text.split('').forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.display = 'inline-block';
+            span.style.opacity = '0';
+            span.style.transform = 'translateY(20px)';
+            span.style.animation = `fadeInUp 0.5s ease forwards`;
+            span.style.animationDelay = `${(index * 0.5 + i * 0.02)}s`;
+            detail.appendChild(span);
+        });
+    });
+}
+
+// Add fadeInUp animation
+const splitStyle = document.createElement('style');
+splitStyle.textContent = `
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(splitStyle);
+
+// Call on load
+window.addEventListener('load', () => {
+    setTimeout(splitTextAnimation, 500);
+});

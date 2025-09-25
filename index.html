@@ -11,11 +11,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-text">DONNA</div>
+        <div class="loader-bars">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+
     <div class="noise-overlay"></div>
+
+    <!-- Animated background shapes -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Cursor spotlight -->
+    <div class="cursor-spotlight"></div>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">DONNA</a>
+            <a href="#home" class="nav-logo glitch" data-text="DONNA">DONNA</a>
             <ul class="nav-menu">
                 <li><a href="#events" class="nav-link">Events</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -44,7 +64,7 @@
                     <line x1="75" y1="60" x2="325" y2="60" stroke="white" stroke-width="1" class="logo-line"/>
                 </svg>
             </div>
-            <p class="tagline">Bar in the heart of Graefekiez</p>
+            <p class="tagline typewriter">Bar in the heart of Graefekiez</p>
             <div class="hero-info">
                 <p class="hero-detail">Live Music Every Thursday</p>
                 <p class="hero-detail">Comedy • Jam Sessions • Events</p>
@@ -61,7 +81,14 @@
 
     <section id="events" class="events">
         <div class="container">
-            <h2 class="section-title">What's On</h2>
+            <h2 class="section-title glitch" data-text="What's On">What's On</h2>
+            <!-- Sound wave visualizer -->
+            <div class="sound-wave">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
             <div class="events-grid">
                 <div class="event-card">
                     <div class="event-date">
@@ -96,11 +123,11 @@
                 <div class="event-card">
                     <div class="event-date">
                         <span class="day">SAT</span>
-                        <span class="date">Bi-Weekly</span>
+                        <span class="date">Weekend</span>
                     </div>
                     <div class="event-details">
-                        <h3>Jam Sessions</h3>
-                        <p>Open stage for musicians to connect and create</p>
+                        <h3>Saturday Nights</h3>
+                        <p>Bar nights with occasional live music performances</p>
                         <span class="event-time">19:00 - Late</span>
                     </div>
                     <svg class="event-graphic" viewBox="0 0 100 100">
