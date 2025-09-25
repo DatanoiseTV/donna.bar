@@ -1,0 +1,11 @@
+# Development files
+TODO.md
+STRUCTURE.md
+CLAUDE.md
+.DS_Store
+node_modules/
+*.log
+.env
+.env.local
+.vscode/
+.idea/

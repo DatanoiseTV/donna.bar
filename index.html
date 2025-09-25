@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONNA - Bar & Live Music Venue | Graefekiez Berlin</title>
+    <meta name="description" content="Bar in the heart of Graefekiez. Live music every Thursday. Comedy, jam sessions, and events.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">DONNA</a>
+            <ul class="nav-menu">
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="diagonal-lines" patternUnits="userSpaceOnUse" width="4" height="4">
+                            <path d="M 0 4 L 4 0" stroke="white" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <text x="200" y="90" text-anchor="middle" class="logo-text">DONNA</text>
+                    <circle cx="50" cy="60" r="25" fill="none" stroke="white" stroke-width="2" class="logo-circle"/>
+                    <circle cx="350" cy="60" r="25" fill="none" stroke="white" stroke-width="2" class="logo-circle"/>
+                    <line x1="75" y1="60" x2="325" y2="60" stroke="white" stroke-width="1" class="logo-line"/>
+                </svg>
+            </div>
+            <p class="tagline">Bar in the heart of Graefekiez</p>
+            <div class="hero-info">
+                <p class="hero-detail">Live Music Every Thursday</p>
+                <p class="hero-detail">Comedy • Jam Sessions • Events</p>
+            </div>
+            <a href="#events" class="cta-button">Upcoming Events</a>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="30" height="50" viewBox="0 0 30 50">
+                <rect x="10" y="10" width="10" height="20" rx="5" stroke="white" stroke-width="2" fill="none"/>
+                <circle cx="15" cy="18" r="3" fill="white" class="scroll-dot"/>
+            </svg>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <div class="container">
+            <h2 class="section-title">What's On</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">THU</span>
+                        <span class="date">Weekly</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Live Music Night</h3>
+                        <p>Every Thursday, our stage comes alive with local and touring acts</p>
+                        <span class="event-time">20:00 - Late</span>
+                    </div>
+                    <svg class="event-graphic" viewBox="0 0 100 100">
+                        <polygon points="50,20 70,40 65,65 35,65 30,40" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">FRI</span>
+                        <span class="date">Monthly</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Comedy Night</h3>
+                        <p>Stand-up comedy featuring Berlin's finest comedians</p>
+                        <span class="event-time">21:00 - Late</span>
+                    </div>
+                    <svg class="event-graphic" viewBox="0 0 100 100">
+                        <rect x="30" y="30" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(45 50 50)"/>
+                        <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">SAT</span>
+                        <span class="date">Bi-Weekly</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Jam Sessions</h3>
+                        <p>Open stage for musicians to connect and create</p>
+                        <span class="event-time">19:00 - Late</span>
+                    </div>
+                    <svg class="event-graphic" viewBox="0 0 100 100">
+                        <path d="M 50 20 Q 70 40 50 60 T 50 100" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M 50 20 Q 30 40 50 60 T 50 100" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">The Venue</h2>
+                    <p>DONNA is more than just a bar – it's a cultural hub where Berlin's creative community converges. Located in the vibrant Graefekiez neighborhood, we've become the go-to spot for musicians, artists, and anyone who appreciates authentic live performances.</p>
+                    <p>Our intimate space creates the perfect atmosphere for those legendary jam sessions you've heard about. Whether you're here for the music, the drinks, or the company, DONNA offers an experience that captures the essence of Berlin's underground culture.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <svg viewBox="0 0 50 50" class="feature-icon">
+                                <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M 15 25 L 35 25 M 25 15 L 25 35" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Live Music</span>
+                        </div>
+                        <div class="feature">
+                            <svg viewBox="0 0 50 50" class="feature-icon">
+                                <rect x="10" y="10" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="25" cy="25" r="5" fill="currentColor"/>
+                            </svg>
+                            <span>Events</span>
+                        </div>
+                        <div class="feature">
+                            <svg viewBox="0 0 50 50" class="feature-icon">
+                                <polygon points="25,10 40,40 10,40" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Community</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <svg viewBox="0 0 400 400" class="abstract-art">
+                        <circle cx="200" cy="200" r="150" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+                        <circle cx="200" cy="200" r="100" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+                        <circle cx="200" cy="200" r="50" fill="none" stroke="white" stroke-width="2" opacity="0.7"/>
+                        <path d="M 50 200 Q 200 100 350 200 T 50 200" fill="none" stroke="white" stroke-width="3"/>
+                        <rect x="150" y="150" width="100" height="100" fill="none" stroke="white" stroke-width="2" transform="rotate(45 200 200)"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-block">
+                        <h3>Location</h3>
+                        <p>Graefestraße 12<br>10967 Berlin<br>Germany</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Book Your Event</h3>
+                        <p>Contact us to book the bar for your private event or performance</p>
+                        <a href="mailto:events@donna-bar.berlin" class="contact-link">Get in Touch</a>
+                    </div>
+                    <div class="info-block">
+                        <h3>Follow Us</h3>
+                        <a href="https://www.instagram.com/donna.bar.berlin/" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" class="social-icon">
+                                <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                            </svg>
+                            @donna.bar.berlin
+                        </a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <svg viewBox="0 0 400 300" class="map-graphic">
+                        <rect width="400" height="300" fill="black"/>
+                        <path d="M 50 150 L 100 100 L 150 120 L 200 80 L 250 140 L 300 110 L 350 150" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+                        <path d="M 50 200 L 100 180 L 150 220 L 200 190 L 250 210 L 300 170 L 350 200" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+                        <circle cx="200" cy="150" r="8" fill="white"/>
+                        <text x="200" y="140" text-anchor="middle" fill="white" font-size="12">DONNA</text>
+                        <rect x="180" y="145" width="40" height="10" fill="none" stroke="white" stroke-width="1"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 DONNA Bar. Graefekiez, Berlin.</p>
+                <p>Live Music • Comedy • Jam Sessions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
